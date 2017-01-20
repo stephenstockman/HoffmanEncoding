@@ -18,8 +18,7 @@ class Node
 	public String prefix;
 	public char letter;
 
-	public Node(int c, int freq)// TODO: implement searching algoritm perhaps
-								// use freq/binary to search
+	public Node(int c, int freq)
 	{
 		frequency = freq;
 		character = c;
@@ -199,9 +198,7 @@ public class Huffman
 
 	}
 
-	public static String createKeyFile()// TODO: Use bits instead of prefix to
-										// save space, could do the same for
-										// character as well
+	public static String createKeyFile()
 	{
 		String key = "";
 		key += keyLength + " ";
@@ -271,11 +268,7 @@ public class Huffman
 
 	}
 
-	public static String decodeHuffman(File file)// TODO: make hella
-													// fast-already made 15%
-													// faster-needs to be
-													// 4000%... to match
-													// compression
+	public static String decodeHuffman(File file)
 	{
 		decodeKey(file);
 
@@ -314,7 +307,7 @@ public class Huffman
 		{
 			prefixList.add(b.prefix);
 		}
-		for (int j = 0; j < binS.length(); j++)// 14690487-4.79kb
+		for (int j = 0; j < binS.length(); j++)
 		{
 			testCode += binS.charAt(j);
 			if (prefixList.contains(testCode))
